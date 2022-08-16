@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*Главный контейнер---------------*/
+.page-header{
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #562e84;
+    box-shadow: 0 1px 5px #562e84;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+/*Навигационное меню--------------*/
+.mobile-menu{
+    position: relative;
+    align-items: center;
+}
+
+.mobile-nav-menu{
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn{
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center; /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 13px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fdba22de;;
+}
+
+.menu__btn > span::before {
+    content: ''; 
+    top: -8px;
+    }
+.menu__btn > span::after { 
+    content: '';
+    top: 8px;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before{
+    top: 0;
+    transform: rotate(0);
+ }
+ #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .mobile-nav-menu {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #562e84;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+    transition-duration: .25s;
+}
+.mobile-nav-menu { 
+    transition-duration: .25s;
+}
+.nav-item {
+    transition-duration: .25s;
+}
+
+.nav-item{
+    color: white;
+    text-decoration: none;
+}
+
+/*Логотип меню--------------*/
+.logo-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 120px;
+    max-height: 70px;
+    padding: 10px;
+} 
+
+.logo-link{
+    text-decoration: none;
+}
+
+.logo-img{
+    width: 100%;
+    height: 100%;
+}
+
+/*Форма поиска--------------*/
+.search{
+    align-self: center;
+    margin-right: 15px;
+}
+
+.search form {
+    position: relative;
+    width: 42px;
+    margin: 0 auto;
+}
+
+.search input {
+    display: none;
+  }
+
+.search button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #fdba22de;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width:900px){
+    /*Главный контейнер---------------*/
+    .page-header{
+        padding: 0;
+        justify-content: space-around;
+    }
+
+
+    /*Логотип меню--------------*/
+    .logo-wrapper{
+        position: static;
+        display: inline-block;
+        max-width: 110px;
+        max-height: 70px;
+        transform: translate(0,0);
+        order: 1;
+    }
+    .logo-img{
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+    }
+    .logo-img:hover{
+        transform: scale(1.1);
+    }
+
+    /*Навигационное меню--------------*/
+    .page-menu{
+        order: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 45%;
+    }
+    #menu__toggle{
+        display: none;
+    }
+    .menu__btn{
+        display: none;
+    }
+    .nav-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-item:hover{
+        text-shadow: 0 0 15px #fdb722;
+        transform: scale(1.1);
+    }
+
+    /*Форма поиска--------------*/
+    .search{
+        align-items: center;
+        order: 3;
+    }
+    .search form {
+        width: 200px;
+        
+    }
+    .search input {
+        display: inline-block;
+        width: 100%;
+        height: 42px;
+        padding-left: 10px;
+        border: 2px solid #c7c5b300;
+        border-radius: 5px;
+        outline: none;
+        background: #ffffff;
+        color: #542084;
+        caret-color: #fdba22de;
+
+        
+      }
+    .search button {
+        position: absolute; 
+        top: 0;
+        right: 0;
+        border-radius: 0 5px 5px 0;
+    }
+    .search button:active{
+        background: #542084;
+    }
+    .search-input::placeholder{
+        color: #542084;
+        
+    }
+
+} 

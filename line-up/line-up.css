@@ -1,0 +1,89 @@
+
+/*Главная страница--------------*/
+
+.main-mobile-page{
+    width: 100%;
+    height: fit-content;
+    padding-top: 80px;
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /*box-shadow: 0 1px 5px purple;*/
+    border-radius: 15px;
+    padding: 15px;
+    /*background: linear-gradient(45deg, #FEFEFE, #fffbff);*/
+}
+
+/*Заголовок--------------*/
+.main-title{
+    margin-bottom: 15px;
+    
+}
+/*Контейнер с карточками grid--------------*/
+.line-up{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    height: fit-content;
+}
+/*Карточки с игроками--------------*/
+.players-card{
+    padding: 10px 0;
+    height: fit-content;
+    text-align: center;
+    border-radius: 15px;   
+    box-shadow: 1px 1px 2px purple;
+    transition: 0.7s;
+}
+
+.players-card img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.card-btn{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 45px;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    background-color: purple;
+}
+
+.card-btn:active{
+    background-color: yellow;
+    color: purple;
+    transition: 0.1s;
+}
+
+/*Подвал сайта--------------*/
+.page-bottom{
+    margin-top: 40px;
+    width: 100%;
+    height: 10vh;
+    background-color: #562e84;
+}
+
+@media(min-width:900px){
+    .card-text{
+        font-size: 15px;
+    }
+    .players-card{
+        cursor: pointer;
+    }
+    .players-card:hover{
+        transform: scale(1.05);
+    }
+    .card-btn:hover{
+        box-shadow: 0 0 5px purple;
+    }
+}

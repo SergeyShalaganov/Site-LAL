@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <title>Лос-Анджелес Лейкерс</title>
+</head>
+<body>
+    <header class="page-header">
+        <div class="mobile-menu page-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <nav class="mobile-nav-menu nav-menu">
+                <a href="#news" class="nav-item">Новости</a>
+                <a href="#schedule" class="nav-item">Календарь</a>
+                <a href="line-up/line-up.html" class="nav-item">Состав</a>
+                <a href="#history" class="nav-item">История команды</a>
+            </nav>
+        </div>
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo-link">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="images/icons/logo.png">
+                    <source media="(max-width:900px )" srcset="images/icons/Lakers-mobile-menu-logo.png">
+                    <img src="images/icons/Lakers-mobile-menu-logo.png" alt="Логотип команды Лос-Анджелес Лейкерс" class="logo-img">
+                </picture>
+            </a>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" id="text-to-find" placeholder="Искать здесь..."  class="search-input" required autocomplete="on">
+                <button type="submit" onclick="javascript: FindOnPage('text-to-find'); return false;"></button>
+            </form>
+        </div>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
