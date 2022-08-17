@@ -1,3 +1,5 @@
+"use strict";
+
 var lastResFind=""; // последний удачный результат
 var copy_page=""; // копия страницы в ихсодном виде
 function TrimStr(s) {

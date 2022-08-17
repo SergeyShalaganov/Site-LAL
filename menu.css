@@ -209,6 +209,10 @@
         align-items: center;
         width: 100%;
     }
+    .nav-item{
+        font-size: 16px;
+        margin: 0;
+    }
     .nav-item:hover{
         text-shadow: 0 0 15px #fdb722;
         transform: scale(1.1);
