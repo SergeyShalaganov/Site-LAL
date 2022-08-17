@@ -93,13 +93,13 @@
 .mobile-nav-menu { 
     transition-duration: .25s;
 }
-.nav-item {
-    transition-duration: .25s;
-}
 
 .nav-item{
     color: white;
     text-decoration: none;
+    transition-duration: .25s;
+    font-size: 25px;
+    margin: 5px 0;
 }
 
 /*Логотип меню--------------*/
